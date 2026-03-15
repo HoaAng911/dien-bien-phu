@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Premium Dark Theme Palette */
+  --color-obsidian: #0f1110;
+  --color-charcoal: #1a1d1b;
+  --color-gold: #D4AF37;
+  --color-gold-muted: #a38520;
+  
+  --color-vietminh: #10b981; /* Emerald */
+  --color-french: #e11d48; /* Rose/Crimson */
+  
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  background-color: var(--color-obsidian);
+  color: #f3f4f6; /* Tailwind gray-100 */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden; /* Full app behaves like a desktop app */
+  font-family: var(--font-body);
+}
+
+/* Glassmorphism Utilities - Professional & Clean */
+.glass-panel {
+  background: rgba(15, 17, 16, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+/* Elegant Scrollbar */
+.clean-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.clean-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.clean-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+}
+.clean-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* Map Background Texture - High Quality */
+.topographic-bg {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Dien_Bien_Phu_camp_map.png'); /* Real historical map */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: sepia(30%) grayscale(40%) contrast(120%) brightness(50%); /* Artistic historical look */
+}
+
+.radial-vignette {
+  background: radial-gradient(circle at center, transparent 30%, var(--color-obsidian) 100%);
+}
+
+.animated-dashed-line {
+  stroke-dasharray: 10, 10;
+  animation: march 4s linear infinite;
+}
+
+@keyframes march {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
